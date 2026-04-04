@@ -17,7 +17,7 @@ outcomes, and ensuring investment in the right solutions.</p>
 {% assign recentPost = collections.posts | reverse | first %}
 {% if recentPost %}
   <li>
-    <h3><a href="{{ recentPost.url }}">{{ recentPost.data.title }}</a></h3>
+    <h3><a href="{{ recentPost.url | url }}">{{ recentPost.data.title }}</a></h3>
     <p style="margin-top: 0.5rem; color: var(--text-secondary);">
       {% if recentPost.data.description %}
         {{ recentPost.data.description }}
@@ -25,7 +25,7 @@ outcomes, and ensuring investment in the right solutions.</p>
         {{ recentPost.templateContent | strip_html | truncate: 150 }}
       {% endif %}
     </p>
-    <a href="{{ recentPost.url }}" style="font-size: 0.9em; font-weight: 700; margin-top: 1rem; display: inline-block;">Read more →</a>
+    <a href="{{ recentPost.url | url }}" style="font-size: 0.9em; font-weight: 700; margin-top: 1rem; display: inline-block;">Read more →</a>
   </li>
 {% endif %}
 </ul>
