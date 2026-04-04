@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <title>{{ title }}</title>
-  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="{{ '/assets/styles.css' | url }}">
   <script src="https://gumroad.com/js/gumroad.js"></script>
 </head>
+
 <body>
   <div class="layout-container">
     <aside class="sidebar">
       <div class="profile-container">
         <div class="profile-circle">
-          <img src="/assets/me.jpg" alt="Profile avatar">
+          <img src="{{ '/assets/me.jpg' | url }}" alt="Profile avatar">
         </div>
         <h2 class="profile-name">Nick Lowthorpe</h2>
       </div>
 
       <nav class="main-nav">
-        <a href="/">Home</a>
-        <a href="/about/">About Me</a>
-        <a href="/blog/">Blog</a>
+        <a href="{{ '/' | url }}">Home</a>
+        <a href="{{ '/about/' | url }}">About Me</a>
+        <a href="{{ '/blog/' | url }}">Blog</a>
       </nav>
-      
+
       <div style="margin-top: 2rem; display: flex; justify-content: center; width: 100%;">
-        <a class="gumroad-button" href="https://nicholaslowthorpe.gumroad.com/l/5csystem" target="_blank">Get my free course on:</a>
+        <a class="gumroad-button" href="https://nicholaslowthorpe.gumroad.com/l/5csystem" target="_blank">Get my free
+          course on:</a>
       </div>
     </aside>
 
@@ -31,6 +34,6 @@
       {{ content }}
     </main>
   </div>
-
 </body>
+
 </html>
