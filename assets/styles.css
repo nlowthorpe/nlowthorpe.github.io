@@ -230,6 +230,81 @@ p {
   background-color: var(--hover-bg);
 }
 
+/* About Page Specific Styles */
+.section-heading {
+  margin-top: 3rem;
+  border-bottom: 2px solid var(--sidebar-bg);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.achievements-list {
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+}
+.achievements-list li {
+  margin-bottom: 0.5rem;
+}
+
+.experience-card, .education-card {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap; /* allow responsive wrapping */
+}
+
+.experience-meta {
+  flex: 0 0 200px; /* fixed width for the left column (Logo + Company text) */
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.company-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.meta-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.meta-text strong {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+
+.meta-text .tenure {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.experience-details {
+  flex: 1;
+  min-width: 300px; /* forces column wrap cleanly onto a new row on mobile */
+}
+
+.experience-details h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+  font-size: 1.3rem;
+}
+
+.experience-details ul {
+  padding-left: 1.2rem;
+}
+
+.experience-details li {
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
   body {
