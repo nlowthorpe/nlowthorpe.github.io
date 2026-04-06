@@ -233,7 +233,7 @@ p {
 /* About Page Specific Styles */
 .section-heading {
   margin-top: 3rem;
-  border-bottom: 2px solid var(--sidebar-bg);
+  border-bottom: 2px solid rgba(163, 196, 188, 0.4); /* 40% opacity version of var(--accent-color) */
   padding-bottom: 0.5rem;
   margin-bottom: 1.5rem;
 }
@@ -266,6 +266,7 @@ p {
   height: 48px;
   border-radius: 8px;
   flex-shrink: 0;
+  object-fit: cover;
 }
 
 .meta-text {
