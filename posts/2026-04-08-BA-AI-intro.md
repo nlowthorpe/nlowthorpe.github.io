@@ -16,7 +16,7 @@ There's no denying that generative AI has changed how we work. What I'm not yet 
 
 ## But what is business analysis?
 
-Some will tell you it's about gathering requirements or writing user stories, and by extension argue 'AI can do that'. That's never really been the job.  Those are *documented outputs* - business analysis is what happens **before** you produce those outputs.
+Some will tell you it's about documenting requirements or writing user stories, and by extension argue 'AI can do that'. That's never really been the job.  Those are *documented outputs* - business analysis is what happens **before** you produce those outputs.
 
 In practice, business analysis looks like being asked to improve an undocumented process that exists in three versions, depending on who you ask. Two people doing the same role describe it differently. Their manager describes a third version that doesn’t quite match either. The data in systems of record doesn't line up with any of those versions - neither does what's in the data warehouse or being reported in PowerBI. 
 
