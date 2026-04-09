@@ -6,11 +6,14 @@ title: Blog
 <h1>Blog</h1>
 
 <ul class="post-list">
-  {% for post in collections.posts %}
-  <li style="margin-bottom: 1rem;">
-    <a href="{{ post.url | url }}">
+  {% for post in collections.posts | sort(attribute='date') | reverse %}
+  <li style="margin-bottom: 1.5rem;">
+    <a href="{{ post.url | url }}" style="text-decoration: none; display: block; color: inherit;">
       <strong>{{ post.data.title }}</strong><br>
       <small>{{ post.date | date: "%d %b %Y" }}</small>
+      {% if post.data.excerpt %}
+        <p style="margin: 0.5rem 0 0 0;">{{ post.data.excerpt }}</p>
+      {% endif %}
     </a>
   </li>
   {% endfor %}
