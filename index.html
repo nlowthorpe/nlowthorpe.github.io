@@ -25,11 +25,10 @@ title: Home
   {% if recentPost %}
   <li>
     <h3><a href="{{ recentPost.url | url }}">{{ recentPost.data.title }}</a></h3>
+    <small style="color: var(--text-secondary); display: block; margin-top: 0.2rem;">{{ recentPost.date | date: "%d %b %Y" }}</small>
     <p style="margin-top: 0.5rem; color: var(--text-secondary);">
-      {% if recentPost.data.description %}
-      {{ recentPost.data.description }}
-      {% else %}
-      {{ recentPost.templateContent | strip_html | truncate: 150 }}
+      {% if recentPost.data.excerpt %}
+      {{ recentPost.data.excerpt }}
       {% endif %}
     </p>
     <a href="{{ recentPost.url | url }}"

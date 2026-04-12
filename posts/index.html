@@ -8,13 +8,13 @@ title: Blog
 <ul class="post-list">
   {% for post in collections.posts | sort(attribute='date') | reverse %}
   <li style="margin-bottom: 1.5rem;">
-    <a href="{{ post.url | url }}" style="text-decoration: none; display: block; color: inherit;">
-      <strong>{{ post.data.title }}</strong><br>
-      <small>{{ post.date | date: "%d %b %Y" }}</small>
-      {% if post.data.excerpt %}
-        <p style="margin: 0.5rem 0 0 0;">{{ post.data.excerpt }}</p>
-      {% endif %}
-    </a>
+    <h3><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
+    <small style="color: var(--text-secondary); display: block; margin-top: 0.2rem;">{{ post.date | date: "%d %b %Y" }}</small>
+    {% if post.data.excerpt %}
+      <p style="margin-top: 0.5rem; color: var(--text-secondary);">{{ post.data.excerpt }}</p>
+    {% endif %}
+    <a href="{{ post.url | url }}"
+      style="font-size: 0.9em; font-weight: 700; margin-top: 1rem; display: inline-block;">Read more →</a>
   </li>
   {% endfor %}
 </ul>
